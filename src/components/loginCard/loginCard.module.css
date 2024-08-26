@@ -1,0 +1,14 @@
+.card {
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cardText {
+    color: #000; /* Isso definirá a cor do texto como vermelho */
+}
+
+.title {
+    text-align: center;
+}
