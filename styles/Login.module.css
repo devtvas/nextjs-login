@@ -1,7 +1,13 @@
 .background {
-  .background-color: #000;
+  .background-color: #123;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
