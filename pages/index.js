@@ -1,8 +1,27 @@
-export default function Home() { 
+
+export default function Home() {
   return (
     <div>
-      <h1>Pagina segura - Perfil do usuario</h1>
-     
+      Página exclusiva para usuários com login
     </div>
-  );
+  )
+}
+
+export const getServerSideProps = async ({ req, res }) => {
+  try {
+    const token = getCookie('authorization', { req, res })
+    if (!token) throw new Error('invalid token')
+
+    verifica(token)
+    return { props: {} }
+
+  } catch (err) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: '/signin',
+      },
+      props: {},
+    }
+  }
 }

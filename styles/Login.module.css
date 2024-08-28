@@ -13,5 +13,9 @@
 }
 
 .text {
-  color: #000
+  color: #000;
+}
+.error {
+  color: red;
+  font-weight: red;
 }
